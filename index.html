@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DomainatCost.com — Domain Names at Cost</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:     #0f1117;
+      --muted:   #6b7280;
+      --rule:    #e4e7ec;
+      --accent:  #1a56db;
+      --bg:      #f9fafb;
+      --card:    #ffffff;
+      --radius:  6px;
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ?? Layout ??????????????????????????????????? */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      padding: 3.5rem 3rem;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06), 0 4px 24px rgba(0,0,0,.04);
+      animation: rise .5s ease both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ?? Wordmark ?????????????????????????????????? */
+    .wordmark {
+      display: flex;
+      align-items: baseline;
+      gap: .15rem;
+      margin-bottom: 2rem;
+    }
+
+    .wordmark-domain {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      letter-spacing: -.02em;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .wordmark-domain .w-red  { color: #c0392b; }
+    .wordmark-domain .w-gray { color: #9ca3af; }
+
+    .wordmark-tld {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      font-size: .85rem;
+      color: var(--muted);
+      letter-spacing: .03em;
+    }
+
+    /* ?? Divider ??????????????????????????????????? */
+    .divider {
+      height: 1px;
+      background: var(--rule);
+      margin: 0 0 2rem;
+    }
+
+    /* ?? Tagline ??????????????????????????????????? */
+    .tagline {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ?? Primary CTA ??????????????????????????????? */
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: .9rem;
+      letter-spacing: .02em;
+      padding: .75rem 1.5rem;
+      border-radius: var(--radius);
+      transition: background .18s, box-shadow .18s;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta:hover {
+      background: #1447c0;
+      box-shadow: 0 4px 12px rgba(26,86,219,.25);
+    }
+
+    .cta svg {
+      width: 14px; height: 14px;
+      stroke: currentColor; fill: none;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    /* ?? Contact row ??????????????????????????????? */
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: .875rem;
+      color: var(--muted);
+    }
+
+    .contact-row svg {
+      width: 15px; height: 15px;
+      flex-shrink: 0;
+      stroke: var(--muted); fill: none;
+      stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    /* email assembled by JS — shows as text, invisible to simple harvesters */
+    #contact-email {
+      color: var(--accent);
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-color: transparent;
+      transition: text-decoration-color .15s;
+    }
+    #contact-email:hover { text-decoration-color: var(--accent); }
+
+    /* ?? Footer ???????????????????????????????????? */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: .75rem;
+      color: var(--rule);
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="card">
+
+    <!-- Wordmark -->
+    <div class="wordmark">
+      <span class="wordmark-domain"><span class="w-red">Domain</span><span class="w-gray">at</span><span class="w-red">Cost</span></span>
+      <span class="wordmark-tld">.com</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Tagline -->
+    <p class="tagline">
+      Domain name registration &amp; management.
+    </p>
+
+    <!-- Primary CTA -->
+    <a class="cta" href="https://bangkok.myorderbox.com/customer" target="_blank" rel="noopener noreferrer">
+      Manage Your Domain Name
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+
+    <!-- Contact — email protected from harvesters -->
+    <div class="contact-row">
+      <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+      <span id="contact-email" role="link" tabindex="0" aria-label="Send email"></span>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  &copy; <span id="yr"></span> DomainatCost.com — All rights reserved.
+</footer>
+
+<script>
+  // ?? Year ??????????????????????????????????????????
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // ?? Email anti-harvesting ?????????????????????????
+  // The address is split and never written as a plain string in source.
+  (function () {
+    var u = 'domainatcost';
+    var d = 'gmail';
+    var t = 'com';
+    var el = document.getElementById('contact-email');
+    var addr = u + '\u0040' + d + '.' + t;   // \u0040 = @
+    el.textContent = addr;
+    el.setAttribute('aria-label', 'Email ' + addr);
+
+    function openMail() {
+      window.location.href = 'mai' + 'lto:' + addr;
+    }
+    el.addEventListener('click', openMail);
+    el.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') openMail();
+    });
+  })();
+</script>
+
+</body>
+</html>
